@@ -1,0 +1,263 @@
+body{
+  font-family: Nunito, sans-serif;
+  color:#1c1c1c; ;
+}
+.h1, h2, h3{
+  font-family: Asap, sans-serif;
+  color:#000000; ;
+}
+.botao{
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: #2d3298;
+  font-size: .9em;
+  border-radius: 3px;
+}
+
+/* Navegaçaõ */
+.logo-img {
+  width: 150px;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+nav > a{
+  text-decoration: none;
+  color: #2d3298;
+  font-weight:800;
+  font-size: 32px;
+  font-family: Yellowtail , sans-serif;
+}
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+nav ul li{
+  text-align: center;
+  width: 100%;
+
+}
+nav ul li a{
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: #2d3298;
+}
+
+/* Cabeçalho */
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../img/homesofas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+}
+header h1{
+  color: #FFFFFF;
+}
+header p{
+  padding: 10px;
+  margin-bottom: 2em;
+  color: #2d3298;
+  border-radius: 15px;
+}
+#sobre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px 20px 20px;
+  background-color: #2d3298;
+  color: #FFFFFF;
+}
+#sobre h2{
+  color: #FFFFFF;
+}
+#sobre p{
+  margin-bottom: 2.5em ;
+  max-width: 1000px;
+}
+#sobre .botao{
+  background-color: #f1f1f1;
+  color: #1c1c1c;
+}
+#servicos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+#servicos div{
+  width: -5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+#fotos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+#fotos h2{
+  margin-bottom: 20px;
+}
+#fotos img{
+  width: 100%;
+}
+#contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+#contato h2{
+  color: #000000;
+}
+
+/*footer*/
+
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: #2d3298;
+  color: #f1f1f1;
+}
+footer a{
+  text-decoration: none;
+  color: #ffff;
+}
+/*Aqui vai transformar o site em responsivo*/
+@media screen and (min-width: 768px) {
+  /* Nav */
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  nav ul {
+    flex-direction: row;
+    width: 70%;
+  }
+
+  /* Cabeçalho */
+  header {
+    height: 600px;
+    height: 60vh;
+    justify-content: center;
+  }
+  #sobre {
+    height: 250px;
+    height: 30vh;
+    justify-content: center;
+    min-height: 250px;
+  }
+  #servicos {
+    flex-direction: row;
+    flex-wrap: wrap; /* Quebra de linha */
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  #servicos h2 {
+    text-align: center;
+    width: 100%;
+  }
+  #servicos div {
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
+  }
+  #h2Fotos{
+    text-align: center;
+  }
+  #fotos {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding-top: 20px;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .container a {
+    display: block;
+    text-decoration: none;
+    margin: 5px; 
+    position: relative; 
+  }
+  
+  .container a::before {
+    content: attr(alt);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease;
+  }
+  
+  .container a:hover::before {
+    opacity: 1; /* Torna o conteúdo visível ao passar o mouse */
+  }
+  
+  #fotos .buttons {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 20px; /* Adiciona espaçamento entre as imagens e os botões */
+  }
+  
+  #fotos button {
+    display: inline-block;
+    margin: 5px; /* Adiciona espaçamento entre os botões */
+    padding: 10px 20px;
+    background-color: #2d3298;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #fotos button:hover {
+    background-color: #2d3298;
+  }
+  
+  #contato {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #contato h2,
+  #contato p {
+    width: 100%;
+  }
+}
