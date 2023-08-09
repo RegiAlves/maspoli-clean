@@ -582,10 +582,12 @@ strong {
   background: var(--primary-color);
 }
 
-.form-label {
-  color: var(--p-color);
-  font-weight: var(--font-weight-bold);
+/* Center-align the WhatsApp button */
+.btn-whatsapp-center {
+  display: flex;
+  justify-content: center;
 }
+
 
 .map-iframe {
   display: block;
