@@ -223,6 +223,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.logo {
+  width: 3rem;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-right: 15px;
   padding-left: 15px;
