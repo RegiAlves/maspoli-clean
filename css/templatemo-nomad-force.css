@@ -582,12 +582,34 @@ strong {
   background: var(--primary-color);
 }
 
-/* Center-align the WhatsApp button */
+/* Estilo personalizado para o botão */
 .btn-whatsapp-center {
   display: flex;
+  align-items: center;
   justify-content: center;
+  height: 0vh; /* Define a altura da div para ocupar toda a altura da viewport */
 }
 
+.btn-whatsapp-center .btn-primary {
+  padding: 20px 40px; /* Ajuste o padding conforme necessário para aumentar o tamanho */
+  border-radius: 30px; /* Define o raio das bordas para torná-las redondas */
+  font-size: 18px; /* Tamanho da fonte do texto do botão */
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateY(5px);
+  }
+}
+
+.shake-animation {
+  animation: shake 0.8s infinite;
+}
 
 .map-iframe {
   display: block;

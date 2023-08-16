@@ -271,7 +271,7 @@
                     <div class="row">
                         
                         <div class="col-lg-7 col-12 mx-auto btn-whatsapp-center">
-                            <a href="https://api.whatsapp.com/send?phone=5511968880042" class="btn btn-primary">
+                            <a href="https://api.whatsapp.com/send?phone=5511968880042" class="btn btn-primary shake-animation">
                                 <i class="bi bi-whatsapp"></i> Entrar em contato pelo WhatsApp
                             </a>
                         </div>
@@ -287,10 +287,10 @@
 
                     <div class="col-12">
                         <h5 class="text-white">
-                            <i class="bi-geo-alt-fill me-2"></i>
-                            Rua Tamandaré, 261 São Caetano do sul, SP
+                            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Tamandaré+261+São+Caetano+do+sul+SP" target="_blank" rel="noopener noreferrer">
+                                <i class="bi-geo-alt-fill me-2"></i> Rua Tamandaré, 261 São Caetano do Sul-SP
+                            </a>
                         </h5>
-
                         <a href="mailto:contato@maspoliclean.com.br" class="custom-link mt-3 mb-5">
                             contato@maspoliclean.com.br
                         </a>
@@ -323,6 +323,14 @@
         <script src="js/magnific-popup-options.js"></script>
         <script src="js/scrollspy.min.js"></script>
         <script src="js/custom.js"></script>
-
+        <script>
+            const whatsappButtons = document.querySelectorAll('.btn-whatsapp-center .btn');
+          
+            setInterval(() => {
+              whatsappButtons.forEach(button => {
+                button.classList.toggle('shake-animation');
+              });
+            }, 3000);
+          </script>
     </body>
 </html>
